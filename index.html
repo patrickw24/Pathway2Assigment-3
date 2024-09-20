@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    
+    <h2>Objective:</h2>
+    <ul>
+<li>Build a student registration form with more complex validation rules.</li>
+    </ul>
+
+    <h2>Form Requirements</h2>
+    <ul>
+        <li>Student Name: Required, at least 3 characters.</li>
+        <li>Email: Required, valid email format using HTML5.</li>
+        <li> Age: Must be between 16 and 60.</li>
+        <li> Course Selection: Required (choose between multiple options).</li>
+    </ul>
+
+    <form onsubmit="formValidation()">
+<label for="inputStudentName">Student Name:</label>
+<span class="error" id="errorName"></span>
+<input id="inputStudentName" type="text" required>
+
+<label for="inputEmail">Email:</label>
+<input id="inputEmail" type="email" required>
+
+<label for="inputAge">Age:</label>
+<input id="inputAge" type="number" min="16" max="60">
+
+<label for="inputCourse">Course Selection:</label>
+<span class="error" id="errorCourse"></span>
+<select name="inputCourse" id="inputCourse" >
+    <option value="">Select A Course </option>
+    <option value="Software Engineering 101">Software Engineering 101 </option>
+    <option value="Cybersecurity 101">Cybersecurity 101</option>
+    <option value="Mechanical Engineering 201">Mechanical Engineering 201</option>
+    <option value="Civil Engineering 101">Civil Engineering 101</option>
+  </select>
+
+
+<button> Submit </button>
+    </form>
+<p id="validationMessage"></p>
+
+    <script src="script.js"></script>   
+</body>
+</html>
